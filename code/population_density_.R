@@ -14,3 +14,17 @@ plot(bei, pch=19)
 plot(bei, pch=19, cex=.5)
 
 bei.extra
+plot(bei.extra)
+
+# Extracting data
+elevation <- bei.extra$elev
+plot(elevation)
+
+elevation <- bei.extra[[1]]
+
+# Density map starting from points
+densitymap<- density(bei)
+densitymap
+
+plot(densitymap)
+points(bei, col="green")
