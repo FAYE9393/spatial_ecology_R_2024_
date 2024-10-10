@@ -12,3 +12,5 @@ bei
 plot(bei)
 plot(bei, pch=19)
 plot(bei, pch=19, cex=.5)
+
+bei.extra
