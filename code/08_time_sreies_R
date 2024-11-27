@@ -1,0 +1,33 @@
+# Time series analysis in R
+
+library(terra)
+library(imageRy)
+
+# Listing all the available files
+im.list()
+
+EN01 <- im.import("EN_01.png")
+EN13 <- im.import("EN_13.png")
+
+difEN=EN01[[1]] - EN13[[1]]
+
+# Example2: Greenland data
+
+gr <- im.import("greenland")
+par(mfrow=c(1,2))
+plot(gr[[1]])
+plot(gr[[4]])
+# Exercise:plot in a 
+par(mfrow=c(1,2))
+plot(gr[[1]])
+plot(gr[[4]])
+
+difgr = gr[[1]] - gr[[4]]
+plot(difgr)
+
+difgr = gr[[1]] - gr[[4]]
+dev.off()
+plot(difgr)
+
+im.plotRGB(gr, r=1, g=2, b=
+im.ridgeline(gr, scale=2
